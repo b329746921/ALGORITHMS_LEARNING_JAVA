@@ -39,6 +39,12 @@ public class SortUtil {
         return true;
     }
 
+    public static void swap(Comparable[] arr, int i, int j){
+        Comparable temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
     public static void testSort(String sortClassName, Comparable[] arr) {
         // 通过Java的反射机制，通过排序的类名，运行排序函数
         try {
