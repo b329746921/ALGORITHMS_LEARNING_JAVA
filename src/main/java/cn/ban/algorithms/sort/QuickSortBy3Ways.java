@@ -1,5 +1,7 @@
 package cn.ban.algorithms.sort;
 
+import java.util.Random;
+
 import static cn.ban.algorithms.sort.util.SortUtil.*;
 
 /**
@@ -15,6 +17,8 @@ public class QuickSortBy3Ways {
         if (l > r) {
             return;
         }
+        int randomInt = (int) Math.random() * r + l;
+        swap(arr, randomInt, l);
         Comparable flag = arr[l];
         // [l+1, lt]<flag [lt+1, i-1]=flag [gt, r]>flag
         int lt = l, gt = r + 1, i = l + 1;
