@@ -22,7 +22,7 @@ public class InsertionSort {
     }
 
     public static void main(String[] args) {
-        testSort("cn.ban.algorithms.sort.InsertionSort", generateRandomArr(100000, 0, 5000));
-        testSort("cn.ban.algorithms.sort.InsertionSort", generateSortedArr(100000, 50));
+//        testSort("cn.ban.algorithms.sort.InsertionSort", generateRandomArr(1000000, 0, 1000000));
+        testSort("cn.ban.algorithms.sort.InsertionSort", generateSortedArr(10000000, 50));
     }
 }

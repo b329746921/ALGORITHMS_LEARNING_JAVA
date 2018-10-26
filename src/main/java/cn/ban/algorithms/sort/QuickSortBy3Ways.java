@@ -37,7 +37,7 @@ public class QuickSortBy3Ways {
     }
 
     public static void main(String[] args) {
-        testSort("cn.ban.algorithms.sort.QuickSortBy3Ways", generateRandomArr(100000, 0, 50));
-        testSort("cn.ban.algorithms.sort.QuickSortBy3Ways", generateSortedArr(100000, 50));
+        testSort("cn.ban.algorithms.sort.QuickSortBy3Ways", generateRandomArr(10000000, 0, 1000000));
+        testSort("cn.ban.algorithms.sort.QuickSortBy3Ways", generateSortedArr(10000000, 50));
     }
 }
