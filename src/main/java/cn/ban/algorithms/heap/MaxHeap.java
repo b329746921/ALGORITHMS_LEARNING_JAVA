@@ -10,7 +10,7 @@ public class MaxHeap<T extends Comparable> {
     private int capacity;
 
     public MaxHeap() {
-        this(10000000);
+        this(16);
     }
 
     public MaxHeap(int capacity) {
@@ -23,6 +23,9 @@ public class MaxHeap<T extends Comparable> {
     }
 
     public void insert(T item) {
+        if (count == capacity) {
+            reSize();
+        }
         data[count] = item;
         shiftUp(count);
         count++;
@@ -53,15 +56,15 @@ public class MaxHeap<T extends Comparable> {
     }
 
     private void shiftUp(int index) {
-        while (index > 0 && data[(index - 1) / 2].compareTo(data[index]) < 0) {
-            swap((index - 1) / 2, index);
-            index = (index - 1) / 2;
+        while (index > 0 && data[parentIndex(index)].compareTo(data[index]) < 0) {
+            swap(parentIndex(index), index);
+            index = parentIndex(index);
         }
     }
 
     private void shiftDown(int index) {
-        while (index * 2 + 1 < count - 1) {
-            int j = index * 2 + 1;
+        while (leftChildIndex(index) < count - 1) {
+            int j = leftChildIndex(index);
             if (j + 1 < count - 1 && data[j].compareTo(data[j + 1]) < 0) {
                 j++;
             }
@@ -71,6 +74,16 @@ public class MaxHeap<T extends Comparable> {
             swap(index, j);
             index = j;
         }
+    }
+
+    private void reSize() {
+        int newCapcity = capacity << 1;
+        T[] newData = (T[]) new Comparable[newCapcity];
+        for (int i = 0; i < data.length; i++) {
+            newData[i] = data[i];
+        }
+        capacity = newCapcity;
+        data = newData;
     }
 
     public int size() {
@@ -85,5 +98,17 @@ public class MaxHeap<T extends Comparable> {
         T temp = data[l];
         data[l] = data[r];
         data[r] = temp;
+    }
+
+    private int leftChildIndex(int index) {
+        return index * 2 + 1;
+    }
+
+    private int rightChildIndex(int index) {
+        return index * 2 + 2;
+    }
+
+    private int parentIndex(int index) {
+        return (index - 1) / 2;
     }
 }

@@ -1,5 +1,7 @@
 package cn.ban.algorithms.sort.util;
 
+import org.apache.commons.lang3.RandomUtils;
+
 import java.lang.reflect.Method;
 
 /**
@@ -10,7 +12,7 @@ public class SortUtil {
     public static Integer[] generateRandomArr(int length, int left, int right) {
         Integer[] arr = new Integer[length];
         for (int i = 0; i < length; i++) {
-            arr[i] = (int)(Math.random() * right + left);
+            arr[i] = RandomUtils.nextInt(left, right);
         }
         return arr;
     }
