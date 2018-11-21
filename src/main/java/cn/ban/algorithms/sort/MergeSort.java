@@ -5,6 +5,8 @@ import java.util.Arrays;
 import static cn.ban.algorithms.sort.util.SortUtil.*;
 
 /**
+ * 归并排序
+ *
  * @author banzijian
  * @date 2018/10/25
  **/

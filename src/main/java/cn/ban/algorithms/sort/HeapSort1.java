@@ -5,6 +5,8 @@ import cn.ban.algorithms.heap.MaxHeap;
 import static cn.ban.algorithms.sort.util.SortUtil.*;
 
 /**
+ * 普通堆排序
+ *
  * @author banzijian
  * @date 2018/10/26
  **/

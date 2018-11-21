@@ -3,6 +3,8 @@ package cn.ban.algorithms.sort;
 import static cn.ban.algorithms.sort.util.SortUtil.*;
 
 /**
+ * 普通快排
+ *
  * @author banzijian
  * @date 2018/09/11
  **/

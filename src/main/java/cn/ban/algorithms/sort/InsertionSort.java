@@ -5,6 +5,7 @@ import javax.swing.*;
 import static cn.ban.algorithms.sort.util.SortUtil.*;
 
 /**
+ * 插入排序
  *
  * @author banzijian
  * @date 2018/09/03

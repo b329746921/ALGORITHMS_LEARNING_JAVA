@@ -3,6 +3,8 @@ package cn.ban.algorithms.sort;
 import static cn.ban.algorithms.sort.util.SortUtil.*;
 
 /**
+ * 冒泡排序
+ *
  * 每次将相邻两数对比，不符合排序条件则交换位置
  * @author banzijian
  * @date 2018/08/30

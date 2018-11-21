@@ -1,6 +1,8 @@
 package cn.ban.algorithms.heap;
 
 /**
+ * 最大堆
+ *
  * @author banzijian
  * @date 2018/10/26
  **/

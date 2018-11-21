@@ -5,6 +5,8 @@ import java.util.Random;
 import static cn.ban.algorithms.sort.util.SortUtil.*;
 
 /**
+ * 三路快排
+ *
  * @author banzijian
  * @date 2018/10/10
  **/

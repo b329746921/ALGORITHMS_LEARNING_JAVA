@@ -3,6 +3,8 @@ package cn.ban.algorithms.sort;
 import static cn.ban.algorithms.sort.util.SortUtil.*;
 
 /**
+ * 选择排序
+ *
  * 选出剩余数中最小值依次放在前面
  * @author banzijian
  * @date 2018/09/03
